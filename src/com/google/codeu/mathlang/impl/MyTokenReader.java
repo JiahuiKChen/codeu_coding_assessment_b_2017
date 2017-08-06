@@ -92,10 +92,6 @@ public final class MyTokenReader implements TokenReader {
         index = ++endQuote;
         //everything appended is the string within the quotes
         String quotedToken = token.toString();
-
-        if (isNameToken(quotedToken)) {
-          return new NameToken(quotedToken);
-        }
         return new StringToken(quotedToken);
       }
       //handles input without quotations
